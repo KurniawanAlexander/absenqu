@@ -1,19 +1,21 @@
  <nav class="sidebar sidebar-offcanvas" id="sidebar" style="background-color: #9ABDFF;">
      <ul class="nav">
          <li class="nav-item">
-             <a class="nav-link" href="index.html">
+             <a class="nav-link" href="/">
                  <i class="icon-grid menu-icon"></i>
-                 <span class="menu-title">Dashboard</span>
+                 <span class="menu-title" style="color: black; font-weight: bold;">
+                     Dashboard
+                 </span>
              </a>
          </li>
          <li class="nav-item">
              <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false"
                  aria-controls="ui-basic">
                  <i class="icon-layout menu-icon"></i>
-                 <span class="menu-title">UI Elements</span>
-                 <i class="menu-arrow"></i>
+                 <span class="menu-title" style="color: black; font-weight: bold;">Profil Usaha/Perusahaan</span>
+                 {{-- <i class="menu-arrow"></i> --}}
              </a>
-             <div class="collapse" id="ui-basic">
+             {{-- <div class="collapse" id="ui-basic">
                  <ul class="nav flex-column sub-menu">
                      <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
                      <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a>
@@ -21,19 +23,31 @@
                      <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a>
                      </li>
                  </ul>
-             </div>
+             </div> --}}
          </li>
          <li class="nav-item">
              <a class="nav-link" data-bs-toggle="collapse" href="#form-elements" aria-expanded="false"
                  aria-controls="form-elements">
                  <i class="icon-columns menu-icon"></i>
-                 <span class="menu-title">Form elements</span>
+                 <span class="menu-title" style="color: black; font-weight: bold;">Master</span>
                  <i class="menu-arrow"></i>
              </a>
              <div class="collapse" id="form-elements">
                  <ul class="nav flex-column sub-menu">
-                     <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Basic
-                             Elements</a></li>
+                     <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Kantor Cabang</a>
+                     </li>
+                     <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Unit
+                             Kerja/Devisi</a></li>
+                     <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Jabatan</a></li>
+                     <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Provinsi</a></li>
+                     <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Kota</a></li>
+                     <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Status
+                             Pegawai/Karyawan</a></li>
+                     <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Sift Kerja</a></li>
+                     <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Cuti Tahunan</a>
+                     </li>
+                     <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Hari Libur
+                             Kerja</a></li>
                  </ul>
              </div>
          </li>
@@ -77,7 +91,8 @@
              </div>
          </li>
          <li class="nav-item">
-             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false"
+                 aria-controls="auth">
                  <i class="icon-head menu-icon"></i>
                  <span class="menu-title">User Pages</span>
                  <i class="menu-arrow"></i>
