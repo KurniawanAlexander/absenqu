@@ -33,7 +33,7 @@
         2.18 Forms CSS
         2.19 Icons CSS
         2.20 List CSS
-        2.21 Loader CSS 
+        2.21 Loader CSS
         2.22 Modal CSS
         2.23 Popover CSS
         2.24 Print CSS
@@ -60,7 +60,7 @@
         3.7 Comingsoon CSS
         3.8 Contacts CSS
         3.9 Dashboard_2 CSS
-        3.10 Dashboard_3 CSS 
+        3.10 Dashboard_3 CSS
         3.11 Dashboard_4 CSS
         3.12 Dashboard_5 CSS
         3.13 Dashboard_default CSS
@@ -111,14 +111,14 @@
         5.6 Select2 CSS
         5.7 Sidebar CSS
         5.8 Rtl CSS
-        5.9 Box-layout CSS 
+        5.9 Box-layout CSS
 
  */
 :root {
-  --theme-deafult: #006666;
+  --theme-deafult: #6EAAFF;
   --theme-secondary: #FE6A49;
   --light-background: rgba(242, 243, 247, 0.7);
-  --body-font-color: #86909C;
+  --body-font-color: #0b0b0b;
   --chart-border: #E6E9EB;
   --recent-chart-bg: #FCFCFD;
   --light-bg: #EEF1F6;
@@ -36692,7 +36692,7 @@ body.dark-only .page-wrapper.modern-type .page-body-wrapper .page-title {
   border: none;
 }
 body.dark-only .page-wrapper .sidebar-main-title p {
-  color: rgba(255, 255, 255, 0.6);
+  color: #000000;
 }
 body.dark-only .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper {
   background-color: #22242B;
@@ -36701,16 +36701,16 @@ body.dark-only .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrap
   stroke: var(--theme-deafult);
 }
 body.dark-only .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links li a span {
-  color: rgba(255, 255, 255, 0.6);
+  color: #000000;
 }
 body.dark-only .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content > li .sidebar-link.active {
   background-color: rgba(255, 255, 255, 0.2);
 }
 body.dark-only .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content > li .mega-menu-container .mega-box .link-section .submenu-title h5 {
-  color: rgba(255, 255, 255, 0.6);
+  color: #000000;
 }
 body.dark-only .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content > li .mega-menu-container .mega-box .link-section .submenu-content.opensubmegamenu li a {
-  color: rgba(255, 255, 255, 0.6);
+  color: #000000;
   font-weight: 400;
 }
 body.dark-only .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content > li .mega-menu-container::after {
@@ -40858,7 +40858,7 @@ body.dark-sidebar .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-w
   background-color: #22242B;
 }
 body.dark-sidebar .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links li a span {
-  color: rgba(255, 255, 255, 0.6);
+  color: #000000;
 }
 body.dark-sidebar .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links li a svg {
   stroke: rgba(255, 255, 255, 0.6);
@@ -44341,7 +44341,7 @@ table.table-bordered thead tr th p {
 .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links li a span {
   letter-spacing: 0.7px;
   text-transform: capitalize;
-  color: rgba(255, 255, 255, 0.8);
+  color: #000000;
 }
 .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links li a.link-nav .according-menu {
   display: none;
