@@ -15,7 +15,7 @@
              </div>
          </form>
          <div class="header-logo-wrapper col-auto p-0">
-             <div class="logo-wrapper"> <a href="index.html"><img class="img-fluid for-light"
+             <div class="logo-wrapper"><img class="img-fluid for-light"
                          src="../assets/images/logo/logo_dark.png" alt="logo-light"><img class="img-fluid for-dark"
                          src="../assets/images/logo/logo.png" alt="logo-dark"></a>
              </div>

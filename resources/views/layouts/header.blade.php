@@ -1,11 +1,11 @@
-  <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+<nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start"
           style="background-color: #34FFF1;">
 
-          <a class="navbar-brand brand-logo me-5">
-
-              <img src="{{ asset('assets/images/logo1.png') }}" style="height: 50px; width: 200px;" alt="logo" />
-
+          {{-- LOGO DIPERBARUI SESUAI PATH ANDA --}}
+          <a class="navbar-brand brand-logo me-5" href="{{ url('/') }}">
+              {{-- Pastikan file ini adalah logo versi TERANG (putih/transparan) agar terlihat bagus di header teal --}}
+              <img src="{{ asset('logo-absenqu/absenqu-icon.png') }}" style="height: 40px; width: auto;" alt="logo" />
           </a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end" style="background-color: #34FFF1;">
