@@ -1,5 +1,6 @@
 // // revenuegrowth
-var options = {
+if(document.querySelector("#revenuegrowth")) {
+  var options = {
     series: [{
     name : 'Online Sale',  
     data: [100,155, 175, 160, 200, 200, 250, 130, 145, 250, 150,250 ]
@@ -263,9 +264,11 @@ var options = {
   };
   var revenuegrowth = new ApexCharts(document.querySelector("#revenuegrowth"), options);
   revenuegrowth.render();
+}
   
   //  visitsCharts
   
+  if(document.querySelector("#visitsCharts")) {
   var options = {
     series: [{
     name: 'Chrome',
@@ -332,44 +335,47 @@ var options = {
   };
   var  visitsCharts = new ApexCharts(document.querySelector("#visitsCharts"), options);
    visitsCharts.render();
+  }
   
   // echart-polar
   
-  require([
-    'echarts'
-  ], function (echarts) {
-  
-    var chart = echarts.init(document.getElementById('echart-polar'));
-    chart.setOption({
-      polar: {
-        radius: [30, '80%']
-      },
-      angleAxis: {
-        max: 4,
-        startAngle: 90
-      },
-      radiusAxis: {
-        type: 'category',
-      },
-      tooltip: {},
-      series: {
-        type: 'bar',
-        data: [
-          {value : 2, itemStyle: { color:'#86909C'},},
-          {value : 2.2, itemStyle: { color:'#FF8367'},},
-          {value : 2.4, itemStyle: { color:'#FFAE1A'},},
-          {value : 3.4, itemStyle: { color:'#006666'},},
-        ],
-        coordinateSystem: 'polar',
-        label: {
-          show: true,
-          position: 'middle',
-          formatter: '{b}: {c}' 
+  if(document.getElementById('echart-polar')) {
+    require([
+      'echarts'
+    ], function (echarts) {
+    
+      var chart = echarts.init(document.getElementById('echart-polar'));
+      chart.setOption({
+        polar: {
+          radius: [30, '80%']
+        },
+        angleAxis: {
+          max: 4,
+          startAngle: 90
+        },
+        radiusAxis: {
+          type: 'category',
+        },
+        tooltip: {},
+        series: {
+          type: 'bar',
+          data: [
+            {value : 2, itemStyle: { color:'#86909C'},},
+            {value : 2.2, itemStyle: { color:'#FF8367'},},
+            {value : 2.4, itemStyle: { color:'#FFAE1A'},},
+            {value : 3.4, itemStyle: { color:'#006666'},},
+          ],
+          coordinateSystem: 'polar',
+          label: {
+            show: true,
+            position: 'middle',
+            formatter: '{b}: {c}' 
+          }
         }
-      }
+      });
+      chart.on('click', function (params) { 
+          console.log(params);
+      });
+      window.onresize = chart.resize;
     });
-    chart.on('click', function (params) { 
-        console.log(params);
-    });
-    window.onresize = chart.resize;
-  });
+  }

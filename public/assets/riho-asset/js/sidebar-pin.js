@@ -3,15 +3,19 @@
   const pinTitle = document.querySelector(".pin-title");
   let pinIcon = document.querySelectorAll(".sidebar-list .fa-thumb-tack");
   function togglePinnedName() {
-    if (document.getElementsByClassName("pined").length) {
-      if (!pinTitle.classList.contains("show")) pinTitle.classList.add("show");
-    } else {
-      pinTitle.classList.remove("show");
+    if (pinTitle) {
+      if (document.getElementsByClassName("pined").length) {
+        if (!pinTitle.classList.contains("show")) pinTitle.classList.add("show");
+      } else {
+        pinTitle.classList.remove("show");
+      }
     }
   }
 
   pinIcon.forEach((item, index) => {
-    var linkName = item.parentNode.querySelector("span").innerHTML;
+    const span = item.parentNode.querySelector("span");
+    if (!span) return;
+    var linkName = span.innerHTML;
     var InitialLocalStorage = JSON.parse(localStorage.getItem("pins") || false);
 
     if (InitialLocalStorage && InitialLocalStorage.includes(linkName)) {

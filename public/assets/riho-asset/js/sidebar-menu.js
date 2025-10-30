@@ -289,9 +289,9 @@
   var menuWrapperSize = getMenuWrapperSize();
 
   if (menuWrapperSize >= "1660") {
-    var sliderLimit = -3500; 
+    var sliderLimit = -3500;
   } else if (menuWrapperSize >= "1440") {
-    var sliderLimit = -3600; 
+    var sliderLimit = -3600;
   } else {
     var sliderLimit = -4200;
   }
@@ -439,13 +439,14 @@
     $(".simplebar-wrapper .simplebar-content-wrapper") &&
     $("#pageWrapper").hasClass("compact-wrapper")
   ) {
-    $(".simplebar-wrapper .simplebar-content-wrapper").animate(
-      {
-        scrollTop:
-          $(".simplebar-wrapper .simplebar-content-wrapper a.active").offset()
-            .top - 400,
-      },
-      1000
-    );
+    var activeLink = $(".simplebar-wrapper .simplebar-content-wrapper a.active");
+    if (activeLink.length > 0) {
+      $(".simplebar-wrapper .simplebar-content-wrapper").animate(
+        {
+          scrollTop: activeLink.offset().top - 400,
+        },
+        1000
+      );
+    }
   }
 })($);

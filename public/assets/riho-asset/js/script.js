@@ -166,9 +166,11 @@
   );
 
   // sidebar filter
-  $(".md-sidebar .md-sidebar-toggle ").on("click", function (e) {
-    $(".md-sidebar .md-sidebar-aside ").toggleClass("open");
-  });
+  if ($(".md-sidebar .md-sidebar-toggle ").length) {
+    $(".md-sidebar .md-sidebar-toggle ").on("click", function (e) {
+      $(".md-sidebar .md-sidebar-aside ").toggleClass("open");
+    });
+  }
 
   $(".loader-wrapper").fadeOut("slow", function () {
     $(this).remove();
@@ -372,16 +374,18 @@
     $(".flip-card-inner").removeClass("flipped");
   });
   // ================== show and hide input start
-  const toggle = document.getElementById("searchIcon")
-  let newinput = false
-  toggle.addEventListener("click", function(){
-    newinput = !newinput
-    if(newinput){
-      document.getElementById("searchInput").classList.add("show")
-    }else{
-      document.getElementById("searchInput").classList.remove("show")
-    }
-  })
+const toggle = document.getElementById("searchIcon");
+  if (toggle) {
+    let newinput = false;
+    toggle.addEventListener("click", function () {
+      newinput = !newinput;
+      if (newinput) {
+        document.getElementById("searchInput").classList.add("show");
+      } else {
+        document.getElementById("searchInput").classList.remove("show");
+      }
+    });
+  }
   // ================ show and hide input css end 
 
 })(jQuery);

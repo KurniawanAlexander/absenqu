@@ -16,8 +16,8 @@
          </form>
          <div class="header-logo-wrapper col-auto p-0">
              <div class="logo-wrapper"><img class="img-fluid for-light"
-                         src="../assets/images/logo/logo_dark.png" alt="logo-light"><img class="img-fluid for-dark"
-                         src="../assets/images/logo/logo.png" alt="logo-dark"></a>
+                         src="{{ asset('assets/riho-asset/images/logo/logo_dark.png') }}" alt="logo-light"><img class="img-fluid for-dark"
+                         src="{{ asset('assets/riho-asset/images/logo/logo.png') }}" alt="logo-dark"></a>
              </div>
              <div class="toggle-sidebar"> <i class="status_toggle middle sidebar-toggle"
                      data-feather="align-center"></i>
@@ -26,7 +26,7 @@
          <div class="left-header col-xxl-5 col-xl-6 col-lg-5 col-md-4 col-sm-3 p-0">
              <div> <a class="toggle-sidebar" href="#"> <i class="iconly-Category icli"> </i></a>
                  <div class="d-flex align-items-center gap-2 ">
-                     <h4 class="f-w-600">Welcome Alex</h4><img class="mt-0" src="../assets/images/hand.gif"
+                     <h4 class="f-w-600">Welcome Alex</h4><img class="mt-0" src="{{ asset('assets/riho-asset/images/hand.gif') }}"
                          alt="hand-gif">
                  </div>
              </div>
@@ -39,9 +39,7 @@
                  <li class="d-md-block d-none">
                      <div class="form search-form mb-0">
                          <div class="input-group"><span class="input-icon">
-                                 <svg>
-                                     <use href="../assets/svg/icon-sprite.svg#search-header"></use>
-                                 </svg>
+<use href="{{ asset('assets/riho-asset/svg/icon-sprite.svg#search-header') }}"></use>
                                  <input class="w-100" type="search" placeholder="Search"></span></div>
                      </div>
                  </li>
@@ -49,7 +47,7 @@
                      <div class="form search-form mb-0">
                          <div class="input-group"> <span class="input-show">
                                  <svg id="searchIcon">
-                                     <use href="../assets/svg/icon-sprite.svg#search-header"></use>
+                                     <use href="{{ asset('assets/riho-asset/svg/icon-sprite.svg#search-header') }}"></use>
                                  </svg>
                                  <div id="searchInput">
                                      <input type="search" placeholder="Search">
@@ -59,7 +57,7 @@
                  </li>
                  <li class="onhover-dropdown">
                      <svg>
-                         <use href="../assets/svg/icon-sprite.svg#star"></use>
+                         <use href="{{ asset('assets/riho-asset/svg/icon-sprite.svg#star') }}"></use>
                      </svg>
                      <div class="onhover-show-div bookmark-flip">
                          <div class="flip-card">
@@ -116,7 +114,7 @@
                  <li class="onhover-dropdown notification-down">
                      <div class="notification-box">
                          <svg>
-                             <use href="../assets/svg/icon-sprite.svg#notification-header"></use>
+                             <use href="{{ asset('assets/riho-asset/svg/icon-sprite.svg#notification-header') }}"></use>
                          </svg><span class="badge rounded-pill badge-secondary">4 </span>
                      </div>
                      <div class="onhover-show-div notification-dropdown">
@@ -151,9 +149,7 @@
                                                      <ul>
                                                          <li class="pr-0 pl-0 pb-3 pt-3">
                                                              <div class="media"><img
-                                                                     class="img-fluid b-r-5 me-3 img-60"
-                                                                     src="../assets/images/other-images/receiver-img.jpg"
-                                                                     alt="">
+                                                                     src="{{ asset('assets/riho-asset/images/other-images/receiver-img.jpg') }}">
                                                                  <div class="media-body"><a class="f-light f-w-500"
                                                                          href="../template/product.html">Men
                                                                          Blue T-Shirt</a>
@@ -188,7 +184,7 @@
                                                      <li>
                                                          <div class="user-alerts"><img
                                                                  class="user-image rounded-circle img-fluid me-2"
-                                                                 src="../assets/images/dashboard/user/5.jpg"
+                                                                 src="{{ asset('assets/riho-asset/images/dashboard/user/5.jpg') }}"
                                                                  alt="user" />
                                                              <div class="user-name">
                                                                  <div>
@@ -201,7 +197,7 @@
                                                                  <div>
                                                                      <svg>
                                                                          <use
-                                                                             href="../assets/svg/icon-sprite.svg#more-vertical">
+                                                                             href="{{ asset('assets/riho-asset/svg/icon-sprite.svg#more-vertical') }}">
                                                                          </use>
                                                                      </svg>
                                                                  </div>
@@ -211,7 +207,7 @@
                                                      <li>
                                                          <div class="user-alerts"><img
                                                                  class="user-image rounded-circle img-fluid me-2"
-                                                                 src="../assets/images/dashboard/user/6.jpg"
+                                                                 src="{{ asset('assets/riho-asset/images/dashboard/user/6.jpg') }}"
                                                                  alt="user" />
                                                              <div class="user-name">
                                                                  <div>
@@ -225,7 +221,7 @@
                                                                  <div>
                                                                      <svg>
                                                                          <use
-                                                                             href="../assets/svg/icon-sprite.svg#more-vertical">
+                                                                             href="{{ asset('assets/riho-asset/svg/icon-sprite.svg#more-vertical') }}">
                                                                          </use>
                                                                      </svg>
                                                                  </div>
@@ -245,7 +241,7 @@
                                                              class="d-flex w-100 notification-data justify-content-center align-items-center gap-2">
                                                              <div class="user-alerts flex-shrink-0"><img
                                                                      class="rounded-circle img-fluid img-40"
-                                                                     src="../assets/images/dashboard/user/3.jpg"
+                                                                     src="{{ asset('assets/riho-asset/images/dashboard/user/3.jpg') }}"
                                                                      alt="user" /></div>
                                                              <div class="flex-grow-1">
                                                                  <div class="common-space user-id w-100">
@@ -266,7 +262,7 @@
                                                              class="d-flex w-100 notification-data justify-content-center align-items-center gap-2">
                                                              <div class="user-alerts flex-shrink-0"><img
                                                                      class="rounded-circle img-fluid img-40"
-                                                                     src="../assets/images/dashboard/user/7.jpg"
+                                                                     src="{{ asset('assets/riho-asset/images/dashboard/user/7.jpg') }}"
                                                                      alt="user" /></div>
                                                              <div class="flex-grow-1">
                                                                  <div class="common-space user-id w-100">
@@ -288,7 +284,7 @@
                                                              class="d-flex w-100 notification-data justify-content-center align-items-center gap-2">
                                                              <div class="user-alerts flex-shrink-0"><img
                                                                      class="rounded-circle img-fluid img-40"
-                                                                     src="../assets/images/dashboard/user/5.jpg"
+                                                                     src="{{ asset('assets/riho-asset/images/dashboard/user/5.jpg') }}"
                                                                      alt="user" /></div>
                                                              <div class="flex-grow-1">
                                                                  <div class="common-space user-id w-100">
@@ -310,7 +306,7 @@
                                                              class="d-flex w-100 notification-data justify-content-center align-items-center gap-2">
                                                              <div class="user-alerts flex-shrink-0"><img
                                                                      class="rounded-circle img-fluid img-40"
-                                                                     src="../assets/images/dashboard/user/6.jpg"
+                                                                     src="{{ asset('assets/riho-asset/images/dashboard/user/6.jpg') }}"
                                                                      alt="user" /></div>
                                                              <div class="flex-grow-1">
                                                                  <div class="common-space user-id w-100">
@@ -335,7 +331,7 @@
                                                  <ul>
                                                      <li class="pr-0 pl-0 pb-3">
                                                          <div class="media"><img class="img-fluid b-r-5 me-3 img-60"
-                                                                 src="../assets/images/other-images/cart-img.jpg"
+                                                                 src="{{ asset('assets/riho-asset/images/other-images/cart-img.jpg') }}"
                                                                  alt="">
                                                              <div class="media-body"><a class="f-light f-w-500"
                                                                      href="../template/product.html">Furniture
@@ -364,7 +360,7 @@
                                                      </li>
                                                      <li class="pr-0 pl-0 pb-3 pt-3">
                                                          <div class="media"><img class="img-fluid b-r-5 me-3 img-60"
-                                                                 src="../assets/images/other-images/receiver-img.jpg"
+                                                                 src="{{ asset('assets/riho-asset/images/other-images/receiver-img.jpg') }}"
                                                                  alt="">
                                                              <div class="media-body"><a class="f-light f-w-500"
                                                                      href="../template/product.html">Men
@@ -414,7 +410,7 @@
                  </li>
                  <li class="profile-nav onhover-dropdown">
                      <div class="media profile-media"><img class="b-r-10"
-                             src="../assets/images/dashboard/profile.png" alt="">
+                             src="{{ asset('assets/riho-asset/images/dashboard/profile.png') }}" alt="">
                          <div class="media-body d-xxl-block d-none box-col-none">
                              <div class="d-flex align-items-center gap-2"> <span>Alex Mora </span><i
                                      class="middle fa fa-angle-down"> </i></div>
