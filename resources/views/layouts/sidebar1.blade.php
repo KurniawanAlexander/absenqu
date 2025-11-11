@@ -166,15 +166,20 @@
 
 
 <div class="sidebar-wrapper" data-layout="stroke-svg">
-    <div class="logo-wrapper"><a href="index.html"><img class="img-fluid"
-                src="{{ asset('assets/riho-asset/images/logo/logo.png') }}" alt=""></a>
+    <div class="logo-wrapper" style="background-color: #56FFF4;">
+        <a href="/">
+            <img class="img-fluid" src="{{ asset('assets/riho-asset/images/logo/logo_absenqu.png') }}"
+                alt="Logo AbsenQu" style="width: 150px; height: auto;">
+        </a>
         <div class="back-btn"><i class="fa fa-angle-left"> </i></div>
-        <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="grid">
-            </i></div>
+        <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="grid"> </i></div>
     </div>
-    <div class="logo-icon-wrapper"><a href="index.html"><img class="img-fluid"
-                src="{{ asset('assets/riho-asset/images/logo/logo-icon.png') }}" alt=""></a></div>
-    <nav class="sidebar-main">
+    {{-- <div class="logo-icon-wrapper">
+        <a href="/">
+            <img class="img-fluid" src="{{ asset('assets/riho-asset/images/logo/logo_absenqu.png') }}"
+                alt="Logo AbsenQu" style="width: 40px; height: auto;"> </a>
+    </div> --}}
+    <nav class="sidebar-main" style="margin-top: 15px;">
         <div class="left-arrow" id="left-arrow"><i data-feather="arrow-left"></i></div>
         <div id="sidebar-menu">
             <ul class="sidebar-links" id="simple-bar">
@@ -184,7 +189,7 @@
                             aria-hidden="true"></i></div>
                 </li>
 
-                <li class="sidebar-list">
+                <li class="sidebar-list" style="margin-top: 30px;">
                     <i class="fa fa-thumb-tack"></i>
                     <a class="sidebar-link sidebar-title link-nav" href="/">
                         <svg class="stroke-icon">
@@ -243,7 +248,7 @@
 
                 <li class="sidebar-list">
                     <i class="fa fa-thumb-tack"></i>
-                    <a class="sidebar-link sidebar-title" href="/verifikasi">
+                    <a class="sidebar-link sidebar-title link-nav" href="/verifikasi">
                         <svg class="stroke-icon">
                             <use href="{{ asset('assets/riho-asset/svg/icon-sprite.svg#stroke-board') }}"></use>
                         </svg>
@@ -256,7 +261,7 @@
 
                 <li class="sidebar-list">
                     <i class="fa fa-thumb-tack"></i>
-                    <a class="sidebar-link sidebar-title" href="/approval">
+                    <a class="sidebar-link sidebar-title link-nav" href="/approval">
                         <svg class="stroke-icon">
                             <use href="{{ asset('assets/riho-asset/svg/icon-sprite.svg#stroke-ecommerce') }}"></use>
                         </svg>
