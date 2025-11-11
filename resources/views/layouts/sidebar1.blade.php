@@ -186,7 +186,7 @@
 
                 <li class="sidebar-list">
                     <i class="fa fa-thumb-tack"></i>
-                    <a class="sidebar-link sidebar-title link-nav" href="#">
+                    <a class="sidebar-link sidebar-title link-nav" href="/">
                         <svg class="stroke-icon">
                             <use href="{{ asset('assets/riho-asset/svg/icon-sprite.svg#stroke-home') }}"></use>
                         </svg>
@@ -209,12 +209,12 @@
                         <h6>Master</h6>
                     </a>
                     <ul class="sidebar-submenu">
-                        <li><a href="#">Unit Kerja/Devisi</a></li>
-                        <li><a href="#">Jabatan</a></li>
-                        <li><a href="#">Provinsi</a></li>
-                        <li><a href="#">Kota</a></li>
-                        <li><a href="#">Status Pegawai/Karyawan</a></li>
-                        <li><a href="#">Sift Kerja</a></li>
+                        <li><a href="/unitkerjadevisi">Unit Kerja/Devisi</a></li>
+                        <li><a href="/jabatan">Jabatan</a></li>
+                        <li><a href="/provinsi">Provinsi</a></li>
+                        <li><a href="/kota">Kota</a></li>
+                        <li><a href="/statuspegawaikaryawan">Status Pegawai/Karyawan</a></li>
+                        <li><a href="/siftkerja">Sift Kerja</a></li>
                     </ul>
                 </li>
 
@@ -230,20 +230,20 @@
                         <h6>Human Resources Department</h6>
                     </a>
                     <ul class="sidebar-submenu">
-                        <li><a href="#">Data Pegawai/Karyawan</a></li>
-                        <li><a href="#">Mutasi Pegawai</a></li>
+                        <li><a href="/datapegawaikaryawan">Data Pegawai/Karyawan</a></li>
+                        <li><a href="mutasipegawai">Mutasi Pegawai</a></li>
                         {{-- Item ini aktif sesuai gambar --}}
-                        <li class="active"><a href="#">Jadwal Sift Kerja</a></li>
-                        <li><a href="#">Absensi/Presensi</a></li>
-                        <li><a href="#">Izin</a></li>
-                        <li><a href="#">Cuti</a></li>
-                        <li><a href="#">Lembur</a></li>
+                        <li class="active"><a href="/jadwalsiftkerja">Jadwal Sift Kerja</a></li>
+                        <li><a href="/absensipresensi">Absensi/Presensi</a></li>
+                        <li><a href="/izin">Izin</a></li>
+                        <li><a href="/cuti">Cuti</a></li>
+                        <li><a href="/lembur">Lembur</a></li>
                     </ul>
                 </li>
 
                 <li class="sidebar-list">
                     <i class="fa fa-thumb-tack"></i>
-                    <a class="sidebar-link sidebar-title" href="#">
+                    <a class="sidebar-link sidebar-title" href="/verifikasi">
                         <svg class="stroke-icon">
                             <use href="{{ asset('assets/riho-asset/svg/icon-sprite.svg#stroke-board') }}"></use>
                         </svg>
@@ -256,7 +256,7 @@
 
                 <li class="sidebar-list">
                     <i class="fa fa-thumb-tack"></i>
-                    <a class="sidebar-link sidebar-title" href="#">
+                    <a class="sidebar-link sidebar-title" href="/approval">
                         <svg class="stroke-icon">
                             <use href="{{ asset('assets/riho-asset/svg/icon-sprite.svg#stroke-ecommerce') }}"></use>
                         </svg>
@@ -279,7 +279,7 @@
                         <h6>Challange</h6>
                     </a>
                     <ul class="sidebar-submenu">
-                        <li><a href="#">Program Chalange</a></li>
+                        <li><a href="/programchallange">Program Chalange</a></li>
                     </ul>
                 </li>
 
@@ -295,8 +295,8 @@
                         <h6>Finance</h6>
                     </a>
                     <ul class="sidebar-submenu">
-                        <li><a href="#">Remburse</a></li>
-                        <li><a href="#">Gaji</a></li>
+                        <li><a href="/remburse">Remburse</a></li>
+                        <li><a href="/gaji">Gaji</a></li>
                     </ul>
                 </li>
 
@@ -312,8 +312,8 @@
                         <h6>Breafing / Meeting</h6>
                     </a>
                     <ul class="sidebar-submenu">
-                        <li><a href="#">Jadwal Meeting</a></li>
-                        <li><a href="#">Pengumuman</a></li>
+                        <li><a href="/jadwalmeeting">Jadwal Meeting</a></li>
+                        <li><a href="/pengumuman">Pengumuman</a></li>
                     </ul>
                 </li>
 
