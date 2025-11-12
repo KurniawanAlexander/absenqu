@@ -2,74 +2,146 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Skydash Admin</title>
-    <!-- plugins:css -->
-    <link rel="stylesheet" href="{{ asset('assets/vendors/feather/feather.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/vendors/ti-icons/css/themify-icons.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/vendors/css/vendor.bundle.base.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/vendors/font-awesome/css/font-awesome.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/vendors/mdi/css/materialdesignicons.min.css') }}">
-    <!-- endinject -->
-    <!-- Plugin css for this page -->
-    <!-- <link rel="stylesheet" href="assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css"> -->
-    <link rel="stylesheet" href="{{ asset('assets/vendors/datatables.net-bs5/dataTables.bootstrap5.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/vendors/ti-icons/css/themify-icons.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/js/select.dataTables.min.css') }}">
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    <!-- endinject -->
-    <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}" />
-
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Riho admin is super flexible, powerful, clean &amp; modern responsive bootstrap 5 admin template with unlimited possibilities.">
+    <meta name="keywords"
+        content="admin template, Riho admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="pixelstrap">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    @auth
+        <meta name="api-token" content="{{ auth()->user()->createToken('dashboard')->plainTextToken }}">
+    @endauth
+    <link rel="icon" href="{{ asset('assets/images/katalogqu_icon.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('assets/images/katalogqu_icon.png') }}" type="image/x-icon">
+    <title>AbsenQu - Admin</title>
+    <!-- Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="{{ asset('assets/riho-asset/css/font-awesome.css') }}"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- ico-font-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/riho-asset/css/vendors/icofont.css') }}">
+    <!-- Themify icon-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/riho-asset/css/vendors/themify.css') }}">
+    <!-- Flag icon-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/riho-asset/css/vendors/flag-icon.css') }}">
+    <!-- Feather icon-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/riho-asset/css/vendors/feather-icon.css') }}">
+    <!-- Plugins css start-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/riho-asset/css/vendors/slick.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/riho-asset/css/vendors/slick-theme.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/riho-asset/css/vendors/scrollbar.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/riho-asset/css/vendors/animate.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/riho-asset/css/vendors/echart.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/riho-asset/css/vendors/date-picker.css') }}">
+    <!-- Plugins css Ends-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/riho-asset/css/vendors/datatables.css') }}">
+    <!-- Bootstrap css-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/riho-asset/css/vendors/bootstrap.css') }}">
+    <!-- App css-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/riho-asset/css/style.css') }}">
+    <link id="color" rel="stylesheet" href="{{ asset('assets/riho-asset/css/color-1.css') }}" media="screen">
+    <!-- Responsive css-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/riho-asset/css/responsive.css') }}">
 </head>
 
 <body>
-    <div class="container-scroller">
-        <!-- partial:partials/_navbar.html -->
+    <!-- loader starts-->
+    <div class="loader-wrapper">
+        <div class="loader">
+            <div class="loader4"></div>
+        </div>
+    </div>
+    <!-- loader ends-->
+    <!-- tap on top starts-->
+    <div class="tap-top"><i data-feather="chevrons-up"></i></div>
+    <!-- tap on tap ends-->
+    <!-- page-wrapper Start-->
+    <div class="page-wrapper compact-wrapper" id="pageWrapper">
+        <!-- Page Header Start-->
         @include('layouts.header')
-        <!-- partial -->
-        <div class="container-fluid page-body-wrapper">
-            <!-- partial:partials/_sidebar.html -->
+        <!-- Page Header Ends                              -->
+        <!-- Page Body Start-->
+        <div class="page-body-wrapper">
+            <!-- Page Sidebar Start-->
             @include('layouts.sidebar')
-            <!-- partial -->
-            <div class="main-panel">
-                <div class="content-wrapper" style="background-color: #FFFFFF;">
+            <!-- Page Sidebar Ends-->
+            <div class="page-body">
+                <div class="container-fluid">
+                    <div class="page-title">
+                        <div class="row">
+                            <div class="col-6">
+                                <h4>@yield('title')</h4>
+                            </div>
+                            <div class="col-6">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="/admin">
+                                            <svg class="stroke-icon">
+                                                <use
+                                                    href="{{ asset('assets/riho-asset/svg/icon-sprite.svg#stroke-home') }}">
+                                                </use>
+                                            </svg></a></li>
+                                    <!-- <li class="breadcrumb-item">Dashboard</li> -->
+                                    <li class="breadcrumb-item active">@yield('title')</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Container-fluid starts-->
+                <div class="container-fluid">
                     @yield('content')
                 </div>
-                <!-- content-wrapper ends -->
-                <!-- partial:partials/_footer.html -->
-                @include('layouts.footer')
-                <!-- partial -->
+                <!-- Container-fluid Ends-->
             </div>
-            <!-- main-panel ends -->
+            <!-- footer start-->
+            @include('layouts.footer')
         </div>
-        <!-- page-body-wrapper ends -->
     </div>
-    <!-- container-scroller -->
-    <!-- plugins:js -->
-    <script src="{{ asset('assets/vendors/js/vendor.bundle.base.js') }}"></script>
-    <!-- endinject -->
-    <!-- Plugin js for this page -->
-    <script src="{{ asset('assets/vendors/chart.js/chart.umd.js') }}"></script>
-    <script src="{{ asset('assets/vendors/datatables.net/jquery.dataTables.js') }}"></script>
-    <!-- <script src="assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script> -->
-    <script src="{{ asset('assets/vendors/datatables.net-bs5/dataTables.bootstrap5.js') }}"></script>
-    <script src="{{ asset('assets/js/dataTables.select.min.js') }}"></script>
-    <!-- End plugin js for this page -->
-    <!-- inject:js -->
-    <script src="{{ asset('assets/js/off-canvas.js') }}"></script>
-    <script src="{{ asset('assets/js/template.js') }}"></script>
-    <script src="{{ asset('assets/js/settings.js') }}"></script>
-    <script src="{{ asset('assets/js/todolist.js') }}"></script>
-    <!-- endinject -->
-    <!-- Custom js for this page-->
-    <script src="{{ asset('assets/js/jquery.cookie.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('assets/js/dashboard.js') }}"></script>
-    <!-- <script src="assets/js/Chart.roundedBarCharts.js"></script> -->
-    <!-- End custom js for this page-->
+    <!-- latest jquery-->
+    <script src="{{ asset('assets/riho-asset/js/jquery.min.js') }}"></script>
+    <!-- Bootstrap js-->
+    <script src="{{ asset('assets/riho-asset/js/bootstrap/bootstrap.bundle.min.js') }}"></script>
+    <!-- feather icon js-->
+    <script src="{{ asset('assets/riho-asset/js/icons/feather-icon/feather.min.js') }}"></script>
+    <script src="{{ asset('assets/riho-asset/js/icons/feather-icon/feather-icon.js') }}"></script>
+    <!-- scrollbar js-->
+    <script src="{{ asset('assets/riho-asset/js/scrollbar/simplebar.js') }}"></script>
+    <script src="{{ asset('assets/riho-asset/js/scrollbar/custom.js') }}"></script>
+    <!-- Sidebar jquery-->
+    <script src="{{ asset('assets/riho-asset/js/config.js') }}"></script>
+    <!-- Plugins JS start-->
+    <script src="{{ asset('assets/riho-asset/js/sidebar-menu.js') }}"></script>
+    <script src="{{ asset('assets/riho-asset/js/sidebar-pin.js') }}"></script>
+    <script src="{{ asset('assets/riho-asset/js/slick/slick.min.js') }}"></script>
+    <script src="{{ asset('assets/riho-asset/js/slick/slick.js') }}"></script>
+    <script src="{{ asset('assets/riho-asset/js/header-slick.js') }}"></script>
+    <script src="{{ asset('assets/riho-asset/js/datatable/datatables/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('assets/riho-asset/js/chart/apex-chart/apex-chart.js') }}"></script>
+    <script src="{{ asset('assets/riho-asset/js/chart/apex-chart/stock-prices.js') }}"></script>
+    <script src="{{ asset('assets/riho-asset/js/chart/apex-chart/moment.min.js') }}"></script>
+    <script src="{{ asset('assets/riho-asset/js/chart/echart/esl.js') }}"></script>
+    <script src="{{ asset('assets/riho-asset/js/chart/echart/config.js') }}"></script>
+    <script src="{{ asset('assets/riho-asset/js/chart/echart/pie-chart/facePrint.js') }}"></script>
+    <script src="{{ asset('assets/riho-asset/js/chart/echart/pie-chart/testHelper.js') }}"></script>
+    <script src="{{ asset('assets/riho-asset/js/chart/echart/pie-chart/custom-transition-texture.js') }}"></script>
+    <script src="{{ asset('assets/riho-asset/js/chart/echart/data/symbols.js') }}"></script>
+    <!-- calendar js-->
+    <script src="{{ asset('assets/riho-asset/js/datepicker/date-picker/datepicker.js') }}"></script>
+    <script src="{{ asset('assets/riho-asset/js/datepicker/date-picker/datepicker.en.js') }}"></script>
+    <script src="{{ asset('assets/riho-asset/js/datepicker/date-picker/datepicker.custom.js') }}"></script>
+    <script src="{{ asset('assets/riho-asset/js/dashboard/dashboard_3.js') }}"></script>
+    <!-- Plugins JS Ends-->
+    <!-- Theme js-->
+    <script src="{{ asset('assets/riho-asset/js/script.js') }}"></script>
+    <script src="{{ asset('assets/riho-asset/js/theme-customizer/customizer.js') }}"></script>
 </body>
 
 </html>

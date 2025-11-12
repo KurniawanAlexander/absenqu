@@ -1,430 +1,463 @@
 @extends('layouts.app')
 
-@section('title', 'Dashboard')
+@section('title', 'Dashboard Admin')
 
 @section('content')
-    <div class="row">
-        <div class="col-md-12 grid-margin">
-            <div class="row">
-                <div class="col-12 col-xl-8 mb-4 mb-xl-0">
-                    <h3 class="font-weight-bold">Welcome John</h3>
-                    <h6 class="font-weight-normal mb-0">All systems are running smoothly! You have <span
-                            class="text-primary">3 unread alerts!</span></h6>
+    <style>
+        /* Styling sederhana, Anda bisa menggantinya dengan framework CSS seperti Bootstrap */
+        .widget-container {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 30px;
+            background-color: #e9ecef;
+        }
+
+        .widget-header {
+            margin-bottom: 25px;
+            border-left: 5px solid #dc3545;
+            padding-left: 15px;
+        }
+
+        .widget-header h3 {
+            color: #333;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .widget-header p {
+            color: #6c757d;
+            font-size: 15px;
+            margin-top: 5px;
+        }
+
+        .stat-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .stat-widget {
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 4px;
+            border: 1px solid #dee2e6;
+            display: flex;
+            align-items: center;
+        }
+
+        .stat-widget .icon-box {
+            background: #f8f9fa;
+            color: #dc3545;
+            padding: 10px;
+            border-radius: 50%;
+            margin-right: 15px;
+            font-size: 20px;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .stat-widget .info-text h5 {
+            margin: 0;
+            font-size: 18px;
+            color: #495057;
+        }
+
+        .stat-widget .info-text p {
+            margin: 0;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .main-content-row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .main-card {
+            background: #ffffff;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .main-card h4 {
+            margin-top: 0;
+            color: #dc3545;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .table-list {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table-list th,
+        .table-list td {
+            padding: 10px;
+            text-align: left;
+            font-size: 13px;
+        }
+
+        .table-list th {
+            background-color: #f1f1f1;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .table-list tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .table-container {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+    </style>
+
+    <div class="widget-container">
+        <div class="widget-header">
+            <h3>Halo, Admin Platform! 👋</h3>
+        </div>
+
+        <div class="stat-row">
+            <div class="stat-widget">
+                <div class="icon-box"><i class="fa fa-user-plus"></i></div>
+                <div class="info-text">
+                    <p>Pengguna Terdaftar</p>
+                    <h5>12.450</h5>
                 </div>
-                <div class="col-12 col-xl-4">
-                    <div class="justify-content-end d-flex">
-                        <div class="dropdown flex-md-grow-1 flex-xl-grow-0">
-                            <button class="btn btn-sm btn-light bg-white dropdown-toggle" type="button"
-                                id="dropdownMenuDate2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                <i class="mdi mdi-calendar"></i> Today (10 Jan 2021) </button>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuDate2">
-                                <a class="dropdown-item" href="#">January - March</a>
-                                <a class="dropdown-item" href="#">March - June</a>
-                                <a class="dropdown-item" href="#">June - August</a>
-                                <a class="dropdown-item" href="#">August - November</a>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            <div class="stat-widget">
+                <div class="icon-box"><i class="fa fa-shopping-bag"></i></div>
+                <div class="info-text">
+                    <p>Toko Aktif</p>
+                    <h5>3.120</h5>
+                </div>
+            </div>
+            <div class="stat-widget">
+                <div class="icon-box"><i class="fa fa-tags"></i></div>
+                <div class="info-text">
+                    <p>Template Terjual</p>
+                    <h5>45.080</h5>
+                </div>
+            </div>
+            <div class="stat-widget">
+                <div class="icon-box"><i class="fa fa-money"></i></div>
+                <div class="info-text">
+                    <p>Pendapatan (Rp)</p>
+                    <h5>125.750.000</h5>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6 grid-margin stretch-card">
-            <div class="card tale-bg">
-                <div class="card-people mt-auto">
-                    <img src="assets/images/dashboard/people.svg" alt="people">
-                    <div class="weather-info">
-                        <div class="d-flex">
-                            <div>
-                                <h2 class="mb-0 font-weight-normal"><i class="icon-sun me-2"></i>31<sup>C</sup></h2>
-                            </div>
-                            <div class="ms-2">
-                                <h4 class="location font-weight-normal">Chicago</h4>
-                                <h6 class="font-weight-normal">Illinois</h6>
-                            </div>
-                        </div>
-                    </div>
+
+        <div class="main-content-row">
+            <div class="main-card" style="flex: 2;">
+                <h4>Pengguna Baru Hari Ini</h4>
+                <div class="table-container">
+                    <table class="table-list">
+                        <thead>
+                            <tr>
+                                <th>Nama Lengkap</th>
+                                <th>Email</th>
+                                <th>Waktu Daftar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ahmad Mustofa</td>
+                                <td>ahmad.m@mail.com</td>
+                                <td>Baru saja</td>
+                            </tr>
+                            <tr>
+                                <td>Siti Rahayu</td>
+                                <td>siti.r@mail.com</td>
+                                <td>25 menit lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Budi Santoso</td>
+                                <td>budi.s@mail.com</td>
+                                <td>1 jam lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Dewi Purnama</td>
+                                <td>dewi.p@mail.com</td>
+                                <td>3 jam lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Eko Widiatmo</td>
+                                <td>eko.w@mail.com</td>
+                                <td>5 jam lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Andi Wijaya</td>
+                                <td>andi.w@mail.com</td>
+                                <td>5 jam lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Rina Sari</td>
+                                <td>rina.s@mail.com</td>
+                                <td>6 jam lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Joko Susilo</td>
+                                <td>joko.s@mail.com</td>
+                                <td>6 jam lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Lina Marlina</td>
+                                <td>lina.m@mail.com</td>
+                                <td>7 jam lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Agus Setiawan</td>
+                                <td>agus.s@mail.com</td>
+                                <td>8 jam lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Fitriani</td>
+                                <td>fitriani@mail.com</td>
+                                <td>8 jam lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Heru Prasetyo</td>
+                                <td>heru.p@mail.com</td>
+                                <td>9 jam lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Indah Permata</td>
+                                <td>indah.p@mail.com</td>
+                                <td>9 jam lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Rudi Hartono</td>
+                                <td>rudi.h@mail.com</td>
+                                <td>10 jam lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Sari Puspita</td>
+                                <td>sari.p@mail.com</td>
+                                <td>10 jam lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Teguh Santoso</td>
+                                <td>teguh.s@mail.com</td>
+                                <td>11 jam lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Wulan Dari</td>
+                                <td>wulan.d@mail.com</td>
+                                <td>11 jam lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Yoga Pratama</td>
+                                <td>yoga.p@mail.com</td>
+                                <td>12 jam lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Zainal Abidin</td>
+                                <td>zainal.a@mail.com</td>
+                                <td>12 jam lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Putri Amelia</td>
+                                <td>putri.a@mail.com</td>
+                                <td>13 jam lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Bambang Pamungkas</td>
+                                <td>bambang.p@mail.com</td>
+                                <td>14 jam lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Citra Lestari</td>
+                                <td>citra.l@mail.com</td>
+                                <td>14 jam lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Dian Nugraha</td>
+                                <td>dian.n@mail.com</td>
+                                <td>15 jam lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Eka Putri</td>
+                                <td>eka.p@mail.com</td>
+                                <td>15 jam lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Fajar Sidik</td>
+                                <td>fajar.s@mail.com</td>
+                                <td>16 jam lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Gita Gutawa</td>
+                                <td>gita.g@mail.com</td>
+                                <td>16 jam lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Hendra Gunawan</td>
+                                <td>hendra.g@mail.com</td>
+                                <td>17 jam lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Ika Kartika</td>
+                                <td>ika.k@mail.com</td>
+                                <td>17 jam lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Jefri Nichol</td>
+                                <td>jefri.n@mail.com</td>
+                                <td>18 jam lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Kartika Sari</td>
+                                <td>kartika.s@mail.com</td>
+                                <td>18 jam lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Lukman Hakim</td>
+                                <td>lukman.h@mail.com</td>
+                                <td>19 jam lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Maya Indah</td>
+                                <td>maya.i@mail.com</td>
+                                <td>19 jam lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Nanda Pratama</td>
+                                <td>nanda.p@mail.com</td>
+                                <td>20 jam lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Oscar Lawalata</td>
+                                <td>oscar.l@mail.com</td>
+                                <td>20 jam lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Pandu Wijaya</td>
+                                <td>pandu.w@mail.com</td>
+                                <td>21 jam lalu</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-        </div>
-        <div class="col-md-6 grid-margin transparent">
-            <div class="row">
-                <div class="col-md-6 mb-4 stretch-card transparent">
-                    <div class="card card-tale">
-                        <div class="card-body">
-                            <p class="mb-4">Today’s Bookings</p>
-                            <p class="fs-30 mb-2">4006</p>
-                            <p>10.00% (30 days)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4 stretch-card transparent">
-                    <div class="card card-dark-blue">
-                        <div class="card-body">
-                            <p class="mb-4">Total Bookings</p>
-                            <p class="fs-30 mb-2">61344</p>
-                            <p>22.00% (30 days)</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
-                    <div class="card card-light-blue">
-                        <div class="card-body">
-                            <p class="mb-4">Number of Meetings</p>
-                            <p class="fs-30 mb-2">34040</p>
-                            <p>2.00% (30 days)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 stretch-card transparent">
-                    <div class="card card-light-danger">
-                        <div class="card-body">
-                            <p class="mb-4">Number of Clients</p>
-                            <p class="fs-30 mb-2">47033</p>
-                            <p>0.22% (30 days)</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12 grid-margin stretch-card">
-            <div class="card">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                        <p class="card-title">Sales Report</p>
-                        <a href="#" class="text-info">View all</a>
-                    </div>
-                    <p class="font-weight-500">The total number of sessions within the date range. It is the period time a
-                        user is actively engaged with your website, page or app, etc</p>
-                    <div id="sales-chart-legend" class="chartjs-legend mt-4 mb-2"></div>
-                    <canvas id="sales-chart"></canvas>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12 grid-margin stretch-card">
-            <div class="card position-relative">
-                <div class="card-body">
-                    <div id="detailedReports" class="carousel slide detailed-report-carousel position-static pt-2"
-                        data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="row">
-                                    <div class="col-md-12 col-xl-3 d-flex flex-column justify-content-start">
-                                        <div class="ml-xl-4 mt-3">
-                                            <p class="card-title">Detailed Reports</p>
-                                            <h1 class="text-primary">$34040</h1>
-                                            <h3 class="font-weight-500 mb-xl-4 text-primary">North America</h3>
-                                            <p class="mb-2 mb-xl-0">The total number of sessions within the date range. It
-                                                is the
-                                                period time a user is actively engaged with your website, page or app, etc
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 col-xl-9">
-                                        <div class="row">
-                                            <div class="col-md-6 border-right">
-                                                <div class="table-responsive mb-3 mb-md-0 mt-3">
-                                                    <table class="table table-borderless report-table">
-                                                        <tr>
-                                                            <td class="text-muted">Illinois</td>
-                                                            <td class="w-100 px-0">
-                                                                <div class="progress progress-md mx-4">
-                                                                    <div class="progress-bar bg-primary" role="progressbar"
-                                                                        style="width: 70%" aria-valuenow="70"
-                                                                        aria-valuemin="0" aria-valuemax="100"></div>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <h5 class="font-weight-bold mb-0">713</h5>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-muted">Washington</td>
-                                                            <td class="w-100 px-0">
-                                                                <div class="progress progress-md mx-4">
-                                                                    <div class="progress-bar bg-warning"
-                                                                        role="progressbar" style="width: 30%"
-                                                                        aria-valuenow="30" aria-valuemin="0"
-                                                                        aria-valuemax="100"></div>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <h5 class="font-weight-bold mb-0">583</h5>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-muted">Mississippi</td>
-                                                            <td class="w-100 px-0">
-                                                                <div class="progress progress-md mx-4">
-                                                                    <div class="progress-bar bg-danger" role="progressbar"
-                                                                        style="width: 95%" aria-valuenow="95"
-                                                                        aria-valuemin="0" aria-valuemax="100"></div>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <h5 class="font-weight-bold mb-0">924</h5>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-muted">California</td>
-                                                            <td class="w-100 px-0">
-                                                                <div class="progress progress-md mx-4">
-                                                                    <div class="progress-bar bg-info" role="progressbar"
-                                                                        style="width: 60%" aria-valuenow="60"
-                                                                        aria-valuemin="0" aria-valuemax="100"></div>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <h5 class="font-weight-bold mb-0">664</h5>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-muted">Maryland</td>
-                                                            <td class="w-100 px-0">
-                                                                <div class="progress progress-md mx-4">
-                                                                    <div class="progress-bar bg-primary"
-                                                                        role="progressbar" style="width: 40%"
-                                                                        aria-valuenow="40" aria-valuemin="0"
-                                                                        aria-valuemax="100"></div>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <h5 class="font-weight-bold mb-0">560</h5>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-muted">Alaska</td>
-                                                            <td class="w-100 px-0">
-                                                                <div class="progress progress-md mx-4">
-                                                                    <div class="progress-bar bg-danger" role="progressbar"
-                                                                        style="width: 75%" aria-valuenow="75"
-                                                                        aria-valuemin="0" aria-valuemax="100"></div>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <h5 class="font-weight-bold mb-0">793</h5>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 mt-3">
-                                                <div class="daoughnutchart-wrapper">
-                                                    <canvas id="north-america-chart"></canvas>
-                                                </div>
-                                                <div id="north-america-chart-legend">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="row">
-                                    <div class="col-md-12 col-xl-3 d-flex flex-column justify-content-start">
-                                        <div class="ml-xl-4 mt-3">
-                                            <p class="card-title">Detailed Reports</p>
-                                            <h1 class="text-primary">$34040</h1>
-                                            <h3 class="font-weight-500 mb-xl-4 text-primary">North America</h3>
-                                            <p class="mb-2 mb-xl-0">The total number of sessions within the date range. It
-                                                is the
-                                                period time a user is actively engaged with your website, page or app, etc
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 col-xl-9">
-                                        <div class="row">
-                                            <div class="col-md-6 border-right">
-                                                <div class="table-responsive mb-3 mb-md-0 mt-3">
-                                                    <table class="table table-borderless report-table">
-                                                        <tr>
-                                                            <td class="text-muted">Illinois</td>
-                                                            <td class="w-100 px-0">
-                                                                <div class="progress progress-md mx-4">
-                                                                    <div class="progress-bar bg-primary"
-                                                                        role="progressbar" style="width: 70%"
-                                                                        aria-valuenow="70" aria-valuemin="0"
-                                                                        aria-valuemax="100"></div>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <h5 class="font-weight-bold mb-0">713</h5>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-muted">Washington</td>
-                                                            <td class="w-100 px-0">
-                                                                <div class="progress progress-md mx-4">
-                                                                    <div class="progress-bar bg-warning"
-                                                                        role="progressbar" style="width: 30%"
-                                                                        aria-valuenow="30" aria-valuemin="0"
-                                                                        aria-valuemax="100"></div>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <h5 class="font-weight-bold mb-0">583</h5>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-muted">Mississippi</td>
-                                                            <td class="w-100 px-0">
-                                                                <div class="progress progress-md mx-4">
-                                                                    <div class="progress-bar bg-danger" role="progressbar"
-                                                                        style="width: 95%" aria-valuenow="95"
-                                                                        aria-valuemin="0" aria-valuemax="100"></div>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <h5 class="font-weight-bold mb-0">924</h5>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-muted">California</td>
-                                                            <td class="w-100 px-0">
-                                                                <div class="progress progress-md mx-4">
-                                                                    <div class="progress-bar bg-info" role="progressbar"
-                                                                        style="width: 60%" aria-valuenow="60"
-                                                                        aria-valuemin="0" aria-valuemax="100"></div>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <h5 class="font-weight-bold mb-0">664</h5>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-muted">Maryland</td>
-                                                            <td class="w-100 px-0">
-                                                                <div class="progress progress-md mx-4">
-                                                                    <div class="progress-bar bg-primary"
-                                                                        role="progressbar" style="width: 40%"
-                                                                        aria-valuenow="40" aria-valuemin="0"
-                                                                        aria-valuemax="100"></div>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <h5 class="font-weight-bold mb-0">560</h5>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-muted">Alaska</td>
-                                                            <td class="w-100 px-0">
-                                                                <div class="progress progress-md mx-4">
-                                                                    <div class="progress-bar bg-danger" role="progressbar"
-                                                                        style="width: 75%" aria-valuenow="75"
-                                                                        aria-valuemin="0" aria-valuemax="100"></div>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <h5 class="font-weight-bold mb-0">793</h5>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 mt-3">
-                                                <div class="daoughnutchart-wrapper">
-                                                    <canvas id="south-america-chart"></canvas>
-                                                </div>
-                                                <div id="south-america-chart-legend"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <a class="carousel-control-prev" href="#detailedReports" role="button" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        </a>
-                        <a class="carousel-control-next" href="#detailedReports" role="button" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12 grid-margin stretch-card">
-            <div class="card">
-                <div class="card-body">
-                    <p class="card-title mb-0">Top Products</p>
-                    <div class="table-responsive">
-                        <table class="table table-striped table-borderless">
-                            <thead>
-                                <tr>
-                                    <th>Product</th>
-                                    <th>Price</th>
-                                    <th>Date</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Search Engine Marketing</td>
-                                    <td class="font-weight-bold">$362</td>
-                                    <td>21 Sep 2018</td>
-                                    <td class="font-weight-medium">
-                                        <div class="badge badge-success">Completed</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Search Engine Optimization</td>
-                                    <td class="font-weight-bold">$116</td>
-                                    <td>13 Jun 2018</td>
-                                    <td class="font-weight-medium">
-                                        <div class="badge badge-success">Completed</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Display Advertising</td>
-                                    <td class="font-weight-bold">$551</td>
-                                    <td>28 Sep 2018</td>
-                                    <td class="font-weight-medium">
-                                        <div class="badge badge-warning">Pending</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Pay Per Click Advertising</td>
-                                    <td class="font-weight-bold">$523</td>
-                                    <td>30 Jun 2018</td>
-                                    <td class="font-weight-medium">
-                                        <div class="badge badge-warning">Pending</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>E-Mail Marketing</td>
-                                    <td class="font-weight-bold">$781</td>
-                                    <td>01 Nov 2018</td>
-                                    <td class="font-weight-medium">
-                                        <div class="badge badge-danger">Cancelled</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Referral Marketing</td>
-                                    <td class="font-weight-bold">$283</td>
-                                    <td>20 Mar 2018</td>
-                                    <td class="font-weight-medium">
-                                        <div class="badge badge-warning">Pending</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Social media marketing</td>
-                                    <td class="font-weight-bold">$897</td>
-                                    <td>26 Oct 2018</td>
-                                    <td class="font-weight-medium">
-                                        <div class="badge badge-success">Completed</div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+
+            <div class="main-card" style="flex: 1;">
+                <h4>Toko Baru Dibuat</h4>
+                <div class="table-container">
+                    <table class="table-list">
+                        <thead>
+                            <tr>
+                                <th>Nama Toko</th>
+                                <th>Dibuat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Toko Cepat Express</td>
+                                <td>2 menit lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Jaya Elektronik Store</td>
+                                <td>1 jam lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Pusat Buku Online</td>
+                                <td>10 jam lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Aneka Gadget</td>
+                                <td>1 hari lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Warung Serba Ada</td>
+                                <td>2 hari lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Karya Mandiri Teknik</td>
+                                <td>2 hari lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Sumber Rejeki</td>
+                                <td>3 hari lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Toko Kelontong Barokah</td>
+                                <td>3 hari lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Maju Jaya Abadi</td>
+                                <td>4 hari lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Sinar Terang</td>
+                                <td>4 hari lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Berkah Tani</td>
+                                <td>5 hari lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Lancar Jaya Motor</td>
+                                <td>5 hari lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Putra Bangsa Collection</td>
+                                <td>6 hari lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Cahaya Abadi</td>
+                                <td>6 hari lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Griya Busana Muslim</td>
+                                <td>7 hari lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Istana Sepatu</td>
+                                <td>7 hari lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Jagonya Komputer</td>
+                                <td>8 hari lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Kencana Motor</td>
+                                <td>8 hari lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Lestari Alam</td>
+                                <td>9 hari lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Mega Elektronik</td>
+                                <td>9 hari lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Nusantara Craft</td>
+                                <td>10 hari lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Optik Sehat</td>
+                                <td>10 hari lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Pustaka Ilmu</td>
+                                <td>11 hari lalu</td>
+                            </tr>
+                            <tr>
+                                <td>Ratu Dapur</td>
+                                <td>11 hari lalu</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
