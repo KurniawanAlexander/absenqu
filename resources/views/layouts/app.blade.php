@@ -141,7 +141,7 @@
     <!-- Plugins JS Ends-->
     <!-- Theme js-->
     <script src="{{ asset('assets/riho-asset/js/script.js') }}"></script>
-    <script src="{{ asset('assets/riho-asset/js/theme-customizer/customizer.js') }}"></script>
+
 </body>
 
 </html>
