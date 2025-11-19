@@ -142,6 +142,9 @@
     <!-- Theme js-->
     <script src="{{ asset('assets/riho-asset/js/script.js') }}"></script>
 
+    <!-- Page specific scripts -->
+    @stack('scripts')
+
 </body>
 
 </html>
