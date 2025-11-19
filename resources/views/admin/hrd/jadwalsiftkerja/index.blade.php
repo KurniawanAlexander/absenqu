@@ -11,11 +11,12 @@
         <div class="card-body">
             <p class="mb-3">Silahkan Cari Data Yang Anda Butuhkan</p>
 
-            <div class="d-block d-md-flex justify-content-between align-items-center">
+            <div class="row">
 
+                {{-- KOLOM KIRI: FILTER --}}
+                {{-- Lebar kolom diperluas karena tidak ada kartu ringkasan di kanan --}}
                 <div>
-                    {{-- 1. FILTER UNIT KERJA/DIVISI --}}
-                    <div class="d-flex align-items-center mb-2 pb-2 border-bottom">
+                    <div class="d-flex align-items-center mb-2 pb-2">
 
                         {{-- KOLOM 1: LABEL (Rata Kanan) --}}
                         <div style="min-width: 140px;" class="text-start">
@@ -38,7 +39,7 @@
                     </div>
 
                     {{-- 2. FILTER NAMA KARYAWAN --}}
-                    <div class="d-flex align-items-center mb-2 pb-2 border-bottom">
+                    <div class="d-flex align-items-center mb-2 pb-2">
 
                         {{-- KOLOM 1: LABEL (Rata Kanan) --}}
                         <div style="min-width: 140px;" class="text-start">
@@ -61,7 +62,7 @@
                     </div>
 
                     {{-- 3. FILTER PERIODE --}}
-                    <div class="d-flex align-items-center mb-2 pb-2 border-bottom">
+                    <div class="d-flex align-items-center mb-2 pb-2">
 
                         {{-- KOLOM 1: LABEL (Rata Kanan) --}}
                         <div style="min-width: 140px;" class="text-start">
@@ -86,17 +87,24 @@
                             </div>
                         </div>
                     </div>
-                    
-                    {{-- TOMBOL TAMPILKAN DATA & AKSI (Di bawah filter, di sebelah kiri) --}}
-                    <div class="d-flex justify-content-start align-items-center mt-3">
-                        <button class="btn btn-info btn-sm btn-lg px-4 me-2"
-                            style="background: #84cc16; border-color: #84cc16; color: white;">Tampilkan data</button>
-                        
-                        {{-- Tombol Entry dan Cetak --}}
+
+                    {{-- TOMBOL TAMPILKAN DATA (Di bawah filter, di sebelah kiri) --}}
+                    <button class="btn btn-info btn-sm btn-lg px-4 mt-3"
+                        style="background: #84cc16; border-color: #84cc16; color: white;">Tampilkan data</button>
+                </div>
+
+                <div class="col-md-2 d-flex flex-column align-items-end justify-content-end ms-auto">
+                    {{-- Tombol Entry dan Cetak, kini disusun HORIZONTAL --}}
+                    <div class="d-flex align-items-center mt-auto">
+
                         <button class="btn btn-sm me-2 fw-bold text-dark"
                             style="background-color: #A5F3FC; border-color: #A5F3FC; width: 100px;">Entry</button>
+                        {{-- Lebar diubah menjadi 100px --}}
+
                         <button class="btn btn-sm fw-bold text-dark"
                             style="background-color: #C2F9D3; border-color: #C2F9D3; width: 100px;">Cetak</button>
+                        {{-- Lebar diubah menjadi 100px --}}
+
                     </div>
                 </div>
             </div>
