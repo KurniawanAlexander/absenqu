@@ -1,9 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Dashboard Admin')
+{{-- @section('title', 'Dashboard Admin') --}}
 
 @section('content')
-
     <p class="h4 mb-4 fw-bold">Jadwal Shift Kerja Pegawai</p>
 
     {{-- KELOMPOK FILTER & Aksi (Menyesuaikan dengan tampilan Jadwal Shift) --}}
@@ -97,10 +96,12 @@
                     {{-- Tombol Entry dan Cetak, kini disusun HORIZONTAL --}}
                     <div class="d-flex align-items-center mt-auto">
 
-                        <button class="btn btn-sm me-2 fw-bold text-dark"
-                            style="background-color: #A5F3FC; border-color: #A5F3FC; width: 100px;">Entry</button>
-                        {{-- Lebar diubah menjadi 100px --}}
-
+                        <a href="{{ url('/jadwalsiftkerja/create') }}" style="text-decoration: none;">
+                            <button class="btn btn-sm me-2 fw-bold text-dark"
+                                style="background-color: #A5F3FC; border-color: #A5F3FC; width: 100px;">
+                                Entry
+                            </button>
+                        </a>
                         <button class="btn btn-sm fw-bold text-dark"
                             style="background-color: #C2F9D3; border-color: #C2F9D3; width: 100px;">Cetak</button>
                         {{-- Lebar diubah menjadi 100px --}}
@@ -1106,20 +1107,6 @@
                                 </td>
                             </tr>
                         </tbody>
-                        <tfoot>
-                            <tr>
-                                <th>No.</th>
-                                <th>Employee Name</th>
-                                <th>Job Designation</th>
-                                <th>Company Name</th>
-                                <th>Invoice No.</th>
-                                <th>Credit/Debit</th>
-                                <th>Date</th>
-                                <th>Priority</th>
-                                <th>Budget</th>
-                                <th>Action</th>
-                            </tr>
-                        </tfoot>
                     </table>
                 </div>
             </div>

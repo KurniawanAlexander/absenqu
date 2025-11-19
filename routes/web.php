@@ -41,9 +41,15 @@ Route::get('/datapegawaikaryawan', function () {
 Route::get('/izin', function () {
     return view('admin.hrd.izin.index');
 });
+
 Route::get('/jadwalsiftkerja', function () {
     return view('admin.hrd.jadwalsiftkerja.index');
 });
+Route::get('/jadwalsiftkerja/create', function () {
+    return view('admin.hrd.jadwalsiftkerja.create');
+});
+
+
 Route::get('/lembur', function () {
     return view('admin.hrd.lembur.index');
 });

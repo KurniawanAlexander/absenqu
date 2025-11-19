@@ -1104,20 +1104,6 @@
                                 </td>
                             </tr>
                         </tbody>
-                        <tfoot>
-                            <tr>
-                                <th>No.</th>
-                                <th>Employee Name</th>
-                                <th>Job Designation</th>
-                                <th>Company Name</th>
-                                <th>Invoice No.</th>
-                                <th>Credit/Debit</th>
-                                <th>Date</th>
-                                <th>Priority</th>
-                                <th>Budget</th>
-                                <th>Action</th>
-                            </tr>
-                        </tfoot>
                     </table>
                 </div>
             </div>
