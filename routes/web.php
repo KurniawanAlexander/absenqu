@@ -38,9 +38,16 @@ Route::get('/cuti', function () {
 Route::get('/datapegawaikaryawan', function () {
     return view('admin.hrd.datapegawaikaryawan.index');
 });
+
+// === PERBAIKAN ROUTE IZIN ===
 Route::get('/izin', function () {
     return view('admin.hrd.izin.index');
 });
+Route::get('/izin/detail', function () {
+    return view('admin.hrd.izin.show');
+});
+// =============================
+
 Route::get('/jadwalsiftkerja', function () {
     return view('admin.hrd.jadwalsiftkerja.index');
 });
