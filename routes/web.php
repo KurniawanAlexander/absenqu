@@ -41,6 +41,9 @@ Route::get('/cuti/create', function () {
 Route::get('/datapegawaikaryawan', function () {
     return view('admin.hrd.datapegawaikaryawan.index');
 });
+Route::get('/datapegawaikaryawan/entry', function () {
+    return view('admin.hrd.datapegawaikaryawan.entry_pegawai');
+});
 Route::get('/izin', function () {
     return view('admin.hrd.izin.index');
 });
