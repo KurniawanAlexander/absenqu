@@ -35,6 +35,9 @@ Route::get('/absensipresensi', function () {
 Route::get('/cuti', function () {
     return view('admin.hrd.cuti.index');
 });
+Route::get('/cuti/create', function () {
+    return view('admin.hrd.cuti.create');
+});
 Route::get('/datapegawaikaryawan', function () {
     return view('admin.hrd.datapegawaikaryawan.index');
 });
@@ -52,6 +55,9 @@ Route::get('/jadwalsiftkerja/create', function () {
 
 Route::get('/lembur', function () {
     return view('admin.hrd.lembur.index');
+});
+Route::get('/lembur/create', function () {
+    return view('admin.hrd.lembur.create');
 });
 Route::get('/mutasipegawai', function () {
     return view('admin.hrd.mutasipegawai.index');
