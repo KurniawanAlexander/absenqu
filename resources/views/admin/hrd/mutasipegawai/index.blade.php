@@ -81,10 +81,11 @@
         <div class="row mb-5">
             {{-- MENGHAPUS offset-lg-3 dan offset-sm-3 untuk memindahkan tombol ke kiri --}}
             <div class="col-lg-6 col-md-12">
-                <button class="btn text-white"
-                    style="background-color: #79d8d1; border: 1px solid #79d8d1; padding: 8px 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                    Tampilkan data
-                </button>
+                {{-- Ganti button menjadi tag <a> dan tambahkan href --}}
+                <a href="{{ route('mutasipegawai.create') }}" class="btn btn-sm text-white mr-2"
+                    style="background-color: #8ce9e9; border: 1px solid #79d8d1; border-radius: 5px; font-weight: bold; padding: 5px 15px; display: inline-flex; align-items: center;">
+                    Entry
+                </a>
             </div>
         </div>
 

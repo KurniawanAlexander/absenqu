@@ -65,6 +65,9 @@ Route::get('/lembur/create', function () {
 Route::get('/mutasipegawai', function () {
     return view('admin.hrd.mutasipegawai.index');
 });
+Route::get('/mutasipegawai/create', function () {
+    return view('admin.hrd.mutasipegawai.create');
+})->name('mutasipegawai.create');
 
 
 //verifikasi
