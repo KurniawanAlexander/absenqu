@@ -162,6 +162,24 @@
         color: #000000 !important;
         font-weight: 600;
     }
+
+    /*
+    |--------------------------------------------------------------------------
+    | CSS untuk Mode Sidebar Ringkas (close_icon)
+    |--------------------------------------------------------------------------
+    */
+    .sidebar-wrapper.close_icon .sidebar-link h6,
+    .sidebar-wrapper.close_icon .sidebar-list>.fa-thumb-tack {
+        display: none !important;
+    }
+
+    .sidebar-wrapper.close_icon .sidebar-link {
+        justify-content: center;
+    }
+
+    .sidebar-wrapper.close_icon .sidebar-link svg {
+        margin-right: 0 !important;
+    }
 </style>
 
 
@@ -171,14 +189,15 @@
             <img class="img-fluid" src="{{ asset('assets/riho-asset/images/logo/logo_absenqu.png') }}"
                 alt="Logo AbsenQu" style="width: 150px; height: auto;">
         </a>
-        {{-- <div class="back-btn"><i class="fa fa-angle-left"> </i></div>
-        <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="grid"> </i></div> --}}
+        <div class="back-btn"><i class="fa fa-angle-left"> </i></div>
+        <div class="toggle-sidebar">
+            <i class="status_toggle middle sidebar-toggle" data-feather="grid"> </i>
+        </div>
     </div>
-    {{-- <div class="logo-icon-wrapper">
-        <a href="/">
-            <img class="img-fluid" src="{{ asset('assets/riho-asset/images/logo/logo_absenqu.png') }}"
-                alt="Logo AbsenQu" style="width: 40px; height: auto;"> </a>
-    </div> --}}
+
+    <div class="logo-icon-wrapper" style="background-color: #56FFF4;">
+        <i class="status_toggle middle sidebar-toggle" data-feather="grid"> </i>
+    </div>
     <nav class="sidebar-main" style="margin-top: 15px;">
         <div class="left-arrow" id="left-arrow"><i data-feather="arrow-left"></i></div>
         <div id="sidebar-menu">

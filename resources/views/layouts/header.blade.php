@@ -1,5 +1,5 @@
  <div class="page-header">
-     <div class="header-wrapper row m-0">
+     <div class="header-wrapper row m-0" style="background-color: #56FFF4;">
          <form class="form-inline search-full col" action="#" method="get">
              <div class="form-group w-100">
                  <div class="Typeahead Typeahead--twitterUsers">
@@ -16,8 +16,9 @@
          </form>
          <div class="header-logo-wrapper col-auto p-0">
              <div class="logo-wrapper"><img class="img-fluid for-light"
-                         src="{{ asset('assets/riho-asset/images/logo/logo_dark.png') }}" alt="logo-light"><img class="img-fluid for-dark"
-                         src="{{ asset('assets/riho-asset/images/logo/logo.png') }}" alt="logo-dark"></a>
+                     src="{{ asset('assets/riho-asset/images/logo/logo_dark.png') }}" alt="logo-light"><img
+                     class="img-fluid for-dark" src="{{ asset('assets/riho-asset/images/logo/logo.png') }}"
+                     alt="logo-dark"></a>
              </div>
              <div class="toggle-sidebar"> <i class="status_toggle middle sidebar-toggle"
                      data-feather="align-center"></i>
@@ -26,8 +27,8 @@
          <div class="left-header col-xxl-5 col-xl-6 col-lg-5 col-md-4 col-sm-3 p-0">
              <div> <a class="toggle-sidebar" href="#"> <i class="iconly-Category icli"> </i></a>
                  <div class="d-flex align-items-center gap-2 ">
-                     <h4 class="f-w-600">Welcome Alex</h4><img class="mt-0" src="{{ asset('assets/riho-asset/images/hand.gif') }}"
-                         alt="hand-gif">
+                     <h4 class="f-w-600">Welcome Alex</h4><img class="mt-0"
+                         src="{{ asset('assets/riho-asset/images/hand.gif') }}" alt="hand-gif">
                  </div>
              </div>
              <div class="welcome-content d-xl-block d-none"><span class="text-truncate col-12">Here’s what’s
@@ -39,15 +40,17 @@
                  <li class="d-md-block d-none">
                      <div class="form search-form mb-0">
                          <div class="input-group"><span class="input-icon">
-<use href="{{ asset('assets/riho-asset/svg/icon-sprite.svg#search-header') }}"></use>
-                                 <input class="w-100" type="search" placeholder="Search"></span></div>
+                                 <use href="{{ asset('assets/riho-asset/svg/icon-sprite.svg#search-header') }}"></use>
+                                 <input class="w-100" type="search" placeholder="Search">
+                             </span></div>
                      </div>
                  </li>
                  <li class="d-md-none d-block">
                      <div class="form search-form mb-0">
                          <div class="input-group"> <span class="input-show">
                                  <svg id="searchIcon">
-                                     <use href="{{ asset('assets/riho-asset/svg/icon-sprite.svg#search-header') }}"></use>
+                                     <use href="{{ asset('assets/riho-asset/svg/icon-sprite.svg#search-header') }}">
+                                     </use>
                                  </svg>
                                  <div id="searchInput">
                                      <input type="search" placeholder="Search">
