@@ -1,10 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Dashboard Admin')
+@section('title', 'Entry Data Shift Kerja')
 
 @section('content')
-
-    <p class="h4 mb-4 fw-bold">Entry Data Shift Kerja Pegawai</p>
 
     <div class="container mt-4">
         <div class="card border-0 shadow-none">
@@ -64,7 +62,7 @@
 
                     {{-- Spacer Tipis --}}
                     <tr>
-                        <td colspan="6" style="height: 10px;"></td>
+                        <td colspan="6" style="height: 20px;"></td>
                     </tr>
 
                     {{-- BARIS 7: BULAN | MULAI | AKHIR (Ditambahkan style warna teks) --}}

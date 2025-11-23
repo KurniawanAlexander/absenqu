@@ -1,10 +1,9 @@
 @extends('layouts.app')
 
-@section('title', 'Dashboard Admin')
+@section('title', 'Rekap Absensi')
 
 @section('content')
 
-    <p class="h4 mb-4">Rekap Absensi Masuk Pegawai</p>
 
     {{-- KELOMPOK FILTER & RINGKASAN (Menggabungkan Logika Horizontal dari Gambar) --}}
     <div class="card mb-4 shadow-sm">

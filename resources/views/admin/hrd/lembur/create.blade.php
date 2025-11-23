@@ -1,29 +1,31 @@
 @extends('layouts.app')
 
 @section('content')
-    <p class="h4 mb-4 fw-bold">Entry Data Lembur Pegawai</p>
-
     <div class="card shadow-sm">
         <div class="card-body p-4">
             <form action="{{ url('/lembur') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
+                <p class="h5 mb-4 fw-bold">Entry Data Lembur Pegawai</p>
                 {{-- DATA PEGAWAI --}}
-                <div class="mb-4">
+                <div class="mb-1">
                     {{-- Nama --}}
-                    <div class="row mb-3 align-items-center">
+                    <div class="row mb-1 align-items-center">
                         <div class="col-md-2">
-                            <label class="form-label mb-0 px-3 py-2 text-white" style="background-color: #515453; rounded">Nama</label>
+                            <label class="form-label mb-0 px-3 py-2 text-white"
+                                style="background-color: #515453; rounded">Nama</label>
                         </div>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="nama" value="Sandy Peratama, SE, MM" readonly>
+                            <input type="text" class="form-control" name="nama" value="Sandy Peratama, SE, MM"
+                                readonly>
                         </div>
                     </div>
 
                     {{-- NIK --}}
-                    <div class="row mb-3 align-items-center">
+                    <div class="row mb-1 align-items-center">
                         <div class="col-md-2">
-                            <label class="form-label mb-0 px-3 py-2 text-white" style="background-color: #515453; rounded">NIK</label>
+                            <label class="form-label mb-0 px-3 py-2 text-white"
+                                style="background-color: #515453; rounded">NIK</label>
                         </div>
                         <div class="col-md-10">
                             <input type="text" class="form-control" name="nik" value="1209298181902190004" readonly>
@@ -31,19 +33,22 @@
                     </div>
 
                     {{-- Nomor Pegawai --}}
-                    <div class="row mb-3 align-items-center">
+                    <div class="row mb-1 align-items-center">
                         <div class="col-md-2">
-                            <label class="form-label mb-0 px-3 py-2 text-white" style="background-color: #515453; rounded">Nomor Pegawai</label>
+                            <label class="form-label mb-0 px-3 py-2 text-white"
+                                style="background-color: #515453; rounded">Nomor Pegawai</label>
                         </div>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="nomor_pegawai" value="92019012910921001" readonly>
+                            <input type="text" class="form-control" name="nomor_pegawai" value="92019012910921001"
+                                readonly>
                         </div>
                     </div>
 
                     {{-- Unit Kerja/Divisi --}}
-                    <div class="row mb-3 align-items-center">
+                    <div class="row mb-1 align-items-center">
                         <div class="col-md-2">
-                            <label class="form-label mb-0 px-3 py-2 text-white" style="background-color: #515453; rounded">Unit Kerja/Divisi</label>
+                            <label class="form-label mb-0 px-3 py-2 text-white"
+                                style="background-color: #515453; rounded">Unit Kerja/Divisi</label>
                         </div>
                         <div class="col-md-10">
                             <input type="text" class="form-control" name="unit_kerja" value="Finance" readonly>
@@ -51,9 +56,10 @@
                     </div>
 
                     {{-- Jabatan --}}
-                    <div class="row mb-3 align-items-center">
+                    <div class="row mb-1 align-items-center">
                         <div class="col-md-2">
-                            <label class="form-label mb-0 px-3 py-2 text-white" style="background-color: #515453; rounded">Jabatan</label>
+                            <label class="form-label mb-0 px-3 py-2 text-white"
+                                style="background-color: #515453; rounded">Jabatan</label>
                         </div>
                         <div class="col-md-10">
                             <input type="text" class="form-control" name="jabatan" value="Staf" readonly>
@@ -61,40 +67,46 @@
                     </div>
 
                     {{-- Jenis Karyawan --}}
-                    <div class="row mb-3 align-items-center">
+                    <div class="row mb-4 align-items-center">
                         <div class="col-md-2">
-                            <label class="form-label mb-0 px-3 py-2 text-white" style="background-color: #515453; rounded">Jenis Karyawan</label>
+                            <label class="form-label mb-0 px-3 py-2 text-white"
+                                style="background-color: #515453; rounded">Jenis Karyawan</label>
                         </div>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="jenis_karyawan" value="Karyawan Tetap" readonly>
+                            <input type="text" class="form-control" name="jenis_karyawan" value="Karyawan Tetap"
+                                readonly>
                         </div>
                     </div>
                 </div>
 
                 {{-- PERMOHONAN --}}
                 <div class="mb-4">
-                    <h5 class="fw-bold mb-3">Permohonan</h5>
+                    <p class="h5 mb-3 fw-bold">Permohonan</p>
 
                     {{-- Tanggal Permohonan --}}
-                    <div class="row mb-3 align-items-center">
+                    <div class="row mb-1 align-items-center">
                         <div class="col-md-2">
-                            <label class="form-label mb-0 px-3 py-2 text-white" style="background-color: #515453; rounded">Tanggal Permohonan</label>
+                            <label class="form-label mb-0 px-3 py-2 text-white"
+                                style="background-color: #515453; rounded">Tanggal Permohonan</label>
                         </div>
                         <div class="col-md-10">
-                            <input type="date" class="form-control" name="tanggal_permohonan" value="2025-02-12" required>
+                            <input type="date" class="form-control" name="tanggal_permohonan" value="2025-02-12"
+                                required>
                         </div>
                     </div>
 
                     {{-- Tanggal Mulai & Tanggal Akhir --}}
-                    <div class="row mb-3 align-items-center">
+                    <div class="row mb-1 align-items-center">
                         <div class="col-md-2">
-                            <label class="form-label mb-0 px-3 py-2 text-white" style="background-color: #515453; rounded">Tanggal Mulai</label>
+                            <label class="form-label mb-0 px-3 py-2 text-white"
+                                style="background-color: #515453; rounded">Tanggal Mulai</label>
                         </div>
                         <div class="col-md-4">
                             <input type="date" class="form-control" name="tanggal_mulai" value="2025-02-13" required>
                         </div>
                         <div class="col-md-2">
-                            <label class="form-label mb-0 px-3 py-2 text-white" style="background-color: #515453; rounded">Tanggal Akhir</label>
+                            <label class="form-label mb-0 px-3 py-2 text-white"
+                                style="background-color: #515453; rounded">Tanggal Akhir</label>
                         </div>
                         <div class="col-md-4">
                             <input type="date" class="form-control" name="tanggal_akhir" value="2025-02-14" required>
@@ -102,9 +114,10 @@
                     </div>
 
                     {{-- Pengajuan Cuti & Sudah Dipakai --}}
-                    <div class="row mb-3 align-items-center">
+                    <div class="row mb-1 align-items-center">
                         <div class="col-md-2">
-                            <label class="form-label mb-0 px-3 py-2 text-white" style="background-color: #515453; rounded">Pengguan Cuti</label>
+                            <label class="form-label mb-0 px-3 py-2 text-white"
+                                style="background-color: #515453; rounded">Pengguan Cuti</label>
                         </div>
                         <div class="col-md-4">
                             <div class="input-group">
@@ -113,7 +126,8 @@
                             </div>
                         </div>
                         <div class="col-md-2">
-                            <label class="form-label mb-0 px-3 py-2 text-white" style="background-color: #515453; rounded">Sudah Dipakai</label>
+                            <label class="form-label mb-0 px-3 py-2 text-white"
+                                style="background-color: #515453; rounded">Sudah Dipakai</label>
                         </div>
                         <div class="col-md-4">
                             <div class="input-group">
@@ -124,9 +138,10 @@
                     </div>
 
                     {{-- Quota Tersisa --}}
-                    <div class="row mb-3 align-items-center">
+                    <div class="row mb-1 align-items-center">
                         <div class="col-md-2">
-                            <label class="form-label mb-0 px-3 py-2 text-white" style="background-color: #515453; rounded">Quota Tersisa</label>
+                            <label class="form-label mb-0 px-3 py-2 text-white"
+                                style="background-color: #515453; rounded">Quota Tersisa</label>
                         </div>
                         <div class="col-md-10">
                             <div class="input-group">
@@ -137,9 +152,10 @@
                     </div>
 
                     {{-- Keterangan --}}
-                    <div class="row mb-3 align-items-center">
+                    <div class="row mb-1 align-items-center">
                         <div class="col-md-2">
-                            <label class="form-label mb-0 px-3 py-2 text-white" style="background-color: #515453; rounded">Keterangan</label>
+                            <label class="form-label mb-0 px-3 py-2 text-white"
+                                style="background-color: #515453; rounded">Keterangan</label>
                         </div>
                         <div class="col-md-10">
                             <input type="text" class="form-control" name="keterangan" value="Cuti Tahunan" required>
@@ -147,9 +163,10 @@
                     </div>
 
                     {{-- Bukti Dokumen --}}
-                    <div class="row mb-3 align-items-center">
+                    <div class="row mb-1 align-items-center">
                         <div class="col-md-2">
-                            <label class="form-label mb-0 px-3 py-2 text-white" style="background-color: #515453; rounded">Bukti Dokumen</label>
+                            <label class="form-label mb-0 px-3 py-2 text-white"
+                                style="background-color: #515453; rounded">Bukti Dokumen</label>
                         </div>
                         <div class="col-md-10">
                             <input type="file" class="form-control" name="bukti_dokumen" accept=".pdf,.doc,.docx">
@@ -158,9 +175,10 @@
                     </div>
 
                     {{-- Status --}}
-                    <div class="row mb-3 align-items-center">
+                    <div class="row mb-1 align-items-center">
                         <div class="col-md-2">
-                            <label class="form-label mb-0 px-3 py-2 text-white" style="background-color: #515453; rounded">Status</label>
+                            <label class="form-label mb-0 px-3 py-2 text-white"
+                                style="background-color: #515453; rounded">Status</label>
                         </div>
                         <div class="col-md-10">
                             <select class="form-select" name="status" required>
@@ -173,9 +191,10 @@
                     </div>
 
                     {{-- Foto Kejadian --}}
-                    <div class="row mb-3 align-items-center">
+                    <div class="row mb-1 align-items-center">
                         <div class="col-md-2">
-                            <label class="form-label mb-0 px-3 py-2 text-white" style="background-color: #515453; rounded">Foto Kejadian</label>
+                            <label class="form-label mb-0 px-3 py-2 text-white"
+                                style="background-color: #515453; rounded">Foto Kejadian</label>
                         </div>
                         <div class="col-md-10">
                             <input type="file" class="form-control" name="foto_kejadian" accept="image/*">
@@ -186,12 +205,13 @@
 
                 {{-- RIWAYAT STATUS VERIFIKASI --}}
                 <div class="mb-4">
-                    <h5 class="fw-bold mb-3">Riwayat Status Verifikasi</h5>
+                    <p class="h5 mb-3 fw-bold">Riwayat Status Verifikasi</p>
 
                     {{-- Verifikasi & Tanggal --}}
-                    <div class="row mb-3 align-items-center">
+                    <div class="row mb-1 align-items-center">
                         <div class="col-md-2">
-                            <label class="form-label mb-0 px-3 py-2 text-white" style="background-color: #515453; rounded">Verifikasi</label>
+                            <label class="form-label mb-0 px-3 py-2 text-white"
+                                style="background-color: #515453; rounded">Verifikasi</label>
                         </div>
                         <div class="col-md-4">
                             <select class="form-select" name="verifikasi">
@@ -202,7 +222,8 @@
                             </select>
                         </div>
                         <div class="col-md-2">
-                            <label class="form-label mb-0 px-3 py-2 text-white" style="background-color: #515453; rounded">Tanggal</label>
+                            <label class="form-label mb-0 px-3 py-2 text-white"
+                                style="background-color: #515453; rounded">Tanggal</label>
                         </div>
                         <div class="col-md-4">
                             <input type="date" class="form-control" name="tanggal_verifikasi">
@@ -210,9 +231,10 @@
                     </div>
 
                     {{-- Keterangan --}}
-                    <div class="row mb-3 align-items-center">
+                    <div class="row mb-1 align-items-center">
                         <div class="col-md-2">
-                            <label class="form-label mb-0 px-3 py-2 text-white" style="background-color: #515453; rounded">Keterangan</label>
+                            <label class="form-label mb-0 px-3 py-2 text-white"
+                                style="background-color: #515453; rounded">Keterangan</label>
                         </div>
                         <div class="col-md-10">
                             <input type="text" class="form-control" name="keterangan_verifikasi" placeholder="-">
@@ -220,19 +242,22 @@
                     </div>
 
                     {{-- Verifikator --}}
-                    <div class="row mb-3 align-items-center">
+                    <div class="row mb-1 align-items-center">
                         <div class="col-md-2">
-                            <label class="form-label mb-0 px-3 py-2 text-white" style="background-color: #515453; rounded">Verifikator</label>
+                            <label class="form-label mb-0 px-3 py-2 text-white"
+                                style="background-color: #515453; rounded">Verifikator</label>
                         </div>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="verifikator" value="Jhon Sitepu / Kepala Bagian SDM">
+                            <input type="text" class="form-control" name="verifikator"
+                                value="Jhon Sitepu / Kepala Bagian SDM">
                         </div>
                     </div>
 
                     {{-- Tanggal Disetujui & Hari --}}
-                    <div class="row mb-3 align-items-center">
+                    <div class="row mb-1 align-items-center">
                         <div class="col-md-2">
-                            <label class="form-label mb-0 px-3 py-2 text-white" style="background-color: #515453; rounded">Tanggal Disetujui</label>
+                            <label class="form-label mb-0 px-3 py-2 text-white"
+                                style="background-color: #515453; rounded">Tanggal Disetujui</label>
                         </div>
                         <div class="col-md-3">
                             <input type="date" class="form-control" name="tanggal_disetujui_mulai" placeholder="-">
@@ -244,7 +269,8 @@
                             <input type="date" class="form-control" name="tanggal_disetujui_akhir" placeholder="-">
                         </div>
                         <div class="col-md-1">
-                            <label class="form-label mb-0 px-3 py-2 text-white" style="background-color: #515453; rounded w-100">Hari</label>
+                            <label class="form-label mb-0 px-3 py-2 text-white"
+                                style="background-color: #515453; rounded w-100">Hari</label>
                         </div>
                         <div class="col-md-3">
                             <input type="number" class="form-control" name="hari_disetujui" placeholder="-">
@@ -257,7 +283,8 @@
                     <a href="{{ url('/lembur') }}" class="btn btn-secondary px-4">
                         <i class="bi bi-x-circle me-2"></i>Batal
                     </a>
-                    <button type="submit" class="btn text-white px-4" style="background-color: #7C3AED; border-color: #7C3AED;">
+                    <button type="submit" class="btn text-white px-4"
+                        style="background-color: #7C3AED; border-color: #7C3AED;">
                         <i class="bi bi-save me-2"></i>Simpan Data
                     </button>
                 </div>

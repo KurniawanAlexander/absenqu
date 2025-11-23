@@ -12,7 +12,7 @@
 
                 {{-- KOLOM KIRI: FILTER --}}
                 <div class="col-md-12">
-                    
+
                     {{-- 1. FILTER UNIT KERJA/DIVISI --}}
                     <div class="d-flex align-items-center mb-2 pb-2">
 
@@ -120,7 +120,8 @@
                                 <a href="#" class="text-decoration-underline text-dark">Surat Perintah Lembur.pdf</a>
                             </td>
                             <td class="text-center">
-                                <span class="badge" style="background-color: #cccccc; color: #92400e; padding: 0.4em 0.8em; border-radius: 4px;">Permohonan</span>
+                                <span class="badge"
+                                    style="background-color: #cccccc; color: #92400e; padding: 0.4em 0.8em; border-radius: 4px;">Permohonan</span>
                             </td>
                         </tr>
                         <tr style="background-color: white;">
@@ -140,7 +141,8 @@
                                 <a href="#" class="text-decoration-underline text-dark">Surat Perintah Lembur.pdf</a>
                             </td>
                             <td class="text-center">
-                                <span class="badge bg-success text-white" style="padding: 0.4em 0.8em; border-radius: 4px;">Izin Diterima</span>
+                                <span class="badge bg-success text-white"
+                                    style="padding: 0.4em 0.8em; border-radius: 4px;">Izin Diterima</span>
                             </td>
                         </tr>
                         <tr style="background-color: #f9fafb;">
@@ -160,7 +162,8 @@
                                 <a href="#" class="text-decoration-underline text-dark">Surat Perintah Lembur.pdf</a>
                             </td>
                             <td class="text-center">
-                                <span class="badge" style="background-color: #cccccc; color: #92400e; padding: 0.4em 0.8em; border-radius: 4px;">Permohonan</span>
+                                <span class="badge"
+                                    style="background-color: #cccccc; color: #92400e; padding: 0.4em 0.8em; border-radius: 4px;">Permohonan</span>
                             </td>
                         </tr>
                         <tr style="background-color: white;">
@@ -177,10 +180,12 @@
                             <td>17.00 -<br>21.00</td>
                             <td>Persiapan campaign marketing</td>
                             <td>
-                                <a href="#" class="text-decoration-underline text-dark">Surat Perintah Lembur.pdf</a>
+                                <a href="#" class="text-decoration-underline text-dark">Surat Perintah
+                                    Lembur.pdf</a>
                             </td>
                             <td class="text-center">
-                                <span class="badge bg-success text-white" style="padding: 0.4em 0.8em; border-radius: 4px;">Izin Diterima</span>
+                                <span class="badge bg-success text-white"
+                                    style="padding: 0.4em 0.8em; border-radius: 4px;">Izin Diterima</span>
                             </td>
                         </tr>
                         <tr style="background-color: #f9fafb;">
@@ -197,10 +202,12 @@
                             <td>20.00 -<br>01.00</td>
                             <td>Maintenance sistem server</td>
                             <td>
-                                <a href="#" class="text-decoration-underline text-dark">Surat Perintah Lembur.pdf</a>
+                                <a href="#" class="text-decoration-underline text-dark">Surat Perintah
+                                    Lembur.pdf</a>
                             </td>
                             <td class="text-center">
-                                <span class="badge bg-success text-white" style="padding: 0.4em 0.8em; border-radius: 4px;">Izin Diterima</span>
+                                <span class="badge bg-success text-white"
+                                    style="padding: 0.4em 0.8em; border-radius: 4px;">Izin Diterima</span>
                             </td>
                         </tr>
                     </tbody>
@@ -233,21 +240,21 @@
         .table tbody tr {
             transition: background-color 0.15s ease-in-out;
         }
-        
+
         .table tbody tr:hover {
             background-color: rgba(0, 123, 255, 0.05);
         }
-        
+
         .badge {
             font-weight: 500;
             padding: 0.35em 0.65em;
         }
-        
+
         .card {
             border: none;
             border-radius: 0.5rem;
         }
-        
+
         .form-select:focus,
         .form-control:focus {
             border-color: #06b6d4;
